@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lorelia1818/TallerCalidad/issues"
   },
-  "homepage": "https://github.com/lorelia1818/TallerCalidad#readme"
+  "homepage": "https://github.com/lorelia1818/TallerCalidad#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
