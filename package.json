@@ -1,0 +1,19 @@
+{
+  "name": "tallercalidad",
+  "version": "1.0.0",
+  "description": "hola",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorelia1818/TallerCalidad.git"
+  },
+  "author": "lorelia1818",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lorelia1818/TallerCalidad/issues"
+  },
+  "homepage": "https://github.com/lorelia1818/TallerCalidad#readme"
+}
