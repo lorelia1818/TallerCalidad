@@ -1,7 +1,7 @@
 const{ Sequelize } = require('sequilize');
 
 const db_conection = new Sequelize(
-    'taller_calidad',
+    'tallercalidad',
     'root',
     '',{
         host: '127.0.0.1',
