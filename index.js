@@ -2,9 +2,9 @@
 const express = require ("express");
 
 //database connection
+const {db_connection} = require('./database/connection');
 
 // using Express 
-
 const app = express();
 
 //Defining the API port
@@ -23,7 +23,14 @@ res.header("access-Control-allow-Methods", "PUT , POST,GET,DELETE,OPTIONS ");
 //app.use ("/api/users", require ("./routes/user"));
 
 //server
-app.listen(app.get("port") ,() => {
-
-    console.log("server in port:", 4000)
-})
+try{
+    const db_connection = db_connection.authenticate();
+    console.log("Connection has been established succesfully :)");
+} catch(error){
+    console.log("Error", error);
+    console.error("Unable to connect to the database :()");
+}
+  
+  app.listen(app.get('port'),() => {
+    console.log('server in port : ', 4000);
+  })
