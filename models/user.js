@@ -1,44 +1,59 @@
-const {DataTypes} = require('sequelize');
-const {db_connection} = require('../database/connection');
+const{  DataTypes } = require('sequelize');
+const {db_connection} = require('./database/connection');
 
-//Reference Models - Foreign keys
-//const {Company} = require('./company');
-//const {Customer} = require('.customer');
+const { user} = requiere ("./user")
+const {account} = requiere ("./account")
+const { auth} = requiere ("./auth")
+const { rol} = requiere ("./rol")
 
-const User = db_connection.define('user',{
-    email: {
-        type: DataTypes.STRING
+const user = db_connection.define("user",{
+    user_id {
+        tyoe: DataTypes.int
     },
-    name: {
-        type: DataTypes.STRING
+    user_identificacion:{
+        type:DataTypes.Vachar(45)
+
     },
-    lastname: {
-        type: DataTypes.STRING
+    user_name: {
+        Type: DataTypes.Vachar(100)
     },
-    status: {
-        type: DataTypes.BOOLEAN        
+    use_lastname: {
+        type: DataTypes.vachar(100)
+
     },
-    isConfirmed: {
-        type: DataTypes.BOOLEAN
+    user_gmail: {
+        Type: DataTypes.Vachar(45)
     },
-    registerdBy: {
-        type: DataTypes.INTEGER
+    use_phone: {
+        type: DataTypes.vachar(45)
+
     },
-    Role_id: {
-        type: DataTypes.INTEGER
-    }/*,
-    Cliet_id: {
-        type: DataTypes.INTEGER,
+    use_pasword: {
+        type: DataTypes.vachar(45)
+
+    },
+    account_id: {
+        type:DataTypes.int,
         references:{
-            model: Company,
-            key: 'id'
+        model: account,
+        key:"id"
         }
-    }  */
-},{
-    freezeTableName: true,
-    tableName: 'user'
-}
+    },
+    account_account_id: {
+        type:DataTypes.int,
+        references:{
+        model: account,
+        key:"id"
+        }
+    },
+    account_account_id: {
+        type:DataTypes.int,
+        references:{
+        model: account,
+        key:"id"
+        }
+    },
+    
 
-);
 
-module.exports = {User};
+})

@@ -2,21 +2,25 @@
 const {SERVER_ERROR} = require('../utils/constants');
 
 //Models
-const {Company} = require('../models/company');
-const {Customer} = require('../models/customer');
+const {account} = require('../models/account');
+const {auth} = require('../models/auth');
+const {rol} = require('../models/rol');
 const {User} = require('../models/user');
 
 //Controllers
 const getSpecificCustomers = async (req, res) => {
     try {
-        const user = await User.findBypk (req.headers.id);
-        const comapny = await Comapny.findBypk (user.Company.id);
-        const client = await Customer.findBypk (user.client.id);
+        const account = await account.findBypk (req.account_id);
+        const auth = await auth.findBypk (req.auth_id);
+        const rol = await rol.findBypk (req.roled_id);
+        const user = await user.findBypk (req.user_id);
+
 
         res.json({
+            ...account.datavalues,
+            ...auth.datavalues,
+            ...rol.datavalues,
             ...user.datavalues,
-            ...client.datavalues,
-            ...Company.datavalues
         });
     }catch(e){
         console.log(e);
