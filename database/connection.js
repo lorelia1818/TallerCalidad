@@ -1,6 +1,6 @@
-const{ Sequelize } = require('sequilize');
+const{ Sequelize } = require('sequelize');
 
-const db_conection = new Sequeliez(
+const db_connection = new Sequelize(
     'tallercalidad',
     'root',
     '182215',{
@@ -11,5 +11,5 @@ const db_conection = new Sequeliez(
 )
 
 module.exports = {
-    db_conection
+    db_connection
 }

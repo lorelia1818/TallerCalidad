@@ -24,7 +24,7 @@ res.header("access-Control-allow-Methods", "PUT , POST,GET,DELETE,OPTIONS ");
 
 //server
 try{
-    const db_connection = db_connection.authenticate();
+    const db_status = db_connection.authenticate();
     console.log("Connection has been established succesfully :)");
 } catch(error){
     console.log("Error", error);
