@@ -4,7 +4,7 @@ const db_connection = new Sequelize(
     'tallercalidad',
     'root',
     '',{
-        host: '127.0.0.1',
+        host: 'localhost',
         dialect: 'mysql',
         //logging: false
     }
