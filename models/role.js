@@ -1,10 +1,10 @@
 const{  DataTypes } = require('sequelize');
 const {db_connection} = require('./database/connection');
 
-const { user} = requiere ("./user")
-const {account} = requiere ("./account")
-const { auth} = requiere ("./auth")
-const { rol} = requiere ("./rol")
+const { User} = requiere ("./user")
+const {Account} = requiere ("./account")
+const { Auth} = requiere ("./auth")
+const { Rol} = requiere ("./rol")
 
 const  rol = db_connection.define ("rol",{
     auth_id:{
