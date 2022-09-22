@@ -13,6 +13,6 @@ const router = express.Router();
 
 //Routes
 //GET
-router.get('/customer', getSpecificCustomer);
+router.get('/user', getSpecificUser);
 
 module.exports = router;
