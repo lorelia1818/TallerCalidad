@@ -80,4 +80,5 @@ const rol = db_connection.define("rol",{
     rol_name:{
         type: DataTypes.Vachar(100)
     },
-})
+    
+});
